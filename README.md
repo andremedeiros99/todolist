@@ -25,7 +25,7 @@ Trabalho para disciplina Sistemas Distribuidos
 Para se executar o programa foi utilizada uma extensão do VSCode para facilitar o uso. A execução provém da classe DemoApplication.java.  
 Para consultar o banco de dados é necessário acessar: http://localhost:8080/h2-console  
   
-Informações para login:  
+###### Informações para login:  
 spring.datasource.url=jdbc:h2:mem:db  
 spring.datasource.driver-ClassName=org.h2.Driver  
 spring.datasource.username=sa  
