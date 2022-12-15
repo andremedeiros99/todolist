@@ -3,13 +3,14 @@ package com.todolist.demo.service.func;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+
 import org.springframework.stereotype.Service;
 
 import com.todolist.demo.entity.Tarefa;
 import com.todolist.demo.repository.TarefaRepository;
 import com.todolist.demo.service.TarefaService;
+
+import java.util.List;
 
 @Service
 public class TarefaServiceFunc implements TarefaService {
@@ -18,8 +19,8 @@ public class TarefaServiceFunc implements TarefaService {
     private TarefaRepository tarefaRepository;
 
     @Override
-    public Page<Tarefa> findAll(Pageable pageable) {
-        return tarefaRepository.findAll(pageable);
+    public List<Tarefa> findAll() {
+        return tarefaRepository.findAll();
     }
 
     @Override

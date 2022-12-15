@@ -2,14 +2,12 @@ package com.todolist.demo.service;
 
 import java.util.Optional;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
 import com.todolist.demo.entity.Tarefa;
+import java.util.List;
 
 public interface TarefaService {
 
-    public Page<Tarefa> findAll(Pageable pageable);
+    public List<Tarefa> findAll();
 
     public Optional<Tarefa> getById(Long id);
 
