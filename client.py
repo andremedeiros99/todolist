@@ -1,5 +1,4 @@
 import requests
-import json5
 
 url = "http://localhost:8080/api/tarefas"
 
