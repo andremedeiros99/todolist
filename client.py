@@ -1,13 +1,11 @@
 import requests
 
-url = "http://localhost:8080/api/tarefas"
+url = "http://26.125.134.174:8080/api/tarefas"
 
 def GET(ID):
     if ID == None:
-        print('oi')
         return requests.get(url)
     else:
-        print(f'{url}/{ID}')
         return requests.get(f'{url}/{ID}')
 
 def POST(json):
@@ -51,6 +49,7 @@ def main():
         if entry == 1:
             req = GET(None)
             print(req.content)
+            print()
             continue
             
         # REQUEST 2
@@ -61,6 +60,7 @@ def main():
                 ID = int(input())
                 req = GET(ID)
                 print(req.content)
+                print()
             except ValueError:
                 print("Insira um numero inteiro para o ID")
                 continue
@@ -90,6 +90,8 @@ def main():
             }
             
             req = POST(json)
+            print(req.content)
+            print()
          
         # REQUEST 4
         if entry == 4:
@@ -98,6 +100,8 @@ def main():
             try:
                 ID = int(input())
                 req = DELETE(ID)
+                print(req.content)
+                print()
             except ValueError:
                 print("Insira um numero inteiro para o ID")
                 continue
@@ -120,7 +124,6 @@ def main():
                 print("Insira um ID existente")
                 continue 
             
-            print(ID)
             print("Descricao")
             descricao = input()
             
@@ -139,11 +142,7 @@ def main():
             }
             
             req = PUT(ID, json)
-            
-            
+            print(req.content)
+            print()
         
 main()
-        
-        
-        
-
